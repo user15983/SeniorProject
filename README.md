@@ -1,3 +1,5 @@
+First, download from the green "code" button on git and extract the zip.
+
 Using VS Code
 
 Need current node.js installed.
