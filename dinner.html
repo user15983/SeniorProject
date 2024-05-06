@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dining Cart</title>
+    <link rel="stylesheet" href="order.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Dinner Menu Cart</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Add to Cart</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="item" id="frickles" data-cost="17">Frickles</td>
+                    <td>$17</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="frickles-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="idahosmokedtroutdip" data-cost="27">Idaho Smoked Trout Dip</td>
+                    <td>$27</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="idahosmokedtroutdip-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="duckfatwedges" data-cost="18">Duck Fat Wedges</td>
+                    <td>$18</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="duckfatwedges-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="tbhnachos" data-cost="29-35">TBH Nachos</td>
+                    <td>$29-35</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="tbhnachos-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="buffalowings" data-cost="21">Buffalo Wings</td>
+                    <td>$21</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="buffalowings-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="housemadericotta" data-cost="26">House-Made Ricotta</td>
+                    <td>$26</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="housemadericotta-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="elknredbeanchili" data-cost="13-19">Elk & Red Bean Chili</td>
+                    <td>$13-19</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="elknredbeanchili-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="cauliflowersoup" data-cost="19">Cauliflower Soup</td>
+                    <td>$19</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="cauliflowersoup-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="trufflecaesarsalad" data-cost="20">Truffle Caesar Salad</td>
+                    <td>$20</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="trufflecaesarsalad-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="beetarugulasalad" data-cost="20">Beet Arugula Salad</td>
+                    <td>$20</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="beetarugulasalad-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="thbhousesalad" data-cost="19">THB House Salad</td>
+                    <td>$19</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="thbhousesalad-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="bisonburger" data-cost="29">Bison Burger</td>
+                    <td>$29</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="bisonburger-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="mutacluckinsando" data-cost="28">Muta Cluckin Sando</td>
+                    <td>$28</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="mutacluckinsando-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="handleburger" data-cost="29-36">Handle Burger</td>
+                    <td>$29-36</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="handleburger-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="wagyucornedbeefstew" data-cost="42">Wagyu Corned Beef Stew</td>
+                    <td>$42</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="wagyucornedbeefstew-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="butternutsquashravioli" data-cost="28">Butternut Squash Ravioli</td>
+                    <td>$28</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="butternutsquashravioli-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="steakandfrites" data-cost="83">Steak and Frites</td>
+                    <td>$83</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="steakandfrites-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="ducklegconfit" data-cost="34">Duck Leg Confit</td>
+                    <td>$34</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="ducklegconfit-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="panroastedidahotrout" data-cost="32">Pan Roasted Idaho Trout</td>
+                    <td>$32</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="panroastedidahotrout-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="thbfishnchips" data-cost="25">THB Fish & Chips</td>
+                    <td>$25</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="thbfishnchips-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="thecanyouhandleitmountainchallenge" data-cost="70">The "Can you handle it" Mountain Challenge</td>
+                    <td>$70</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="thecanyouhandleitmountainchallenge-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="bakedtrufflemac" data-cost="15">Baked Truffle Mac</td>
+                    <td>$15</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="bakedtrufflemac-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="crispybrusselsqrouts" data-cost="15">Crispy Brussel Sprouts</td>
+                    <td>$15</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="crispybrusselsqrouts-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="roastedcarrots" data-cost="15">Roasted Carrots</td>
+                    <td>$15</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="roastedcarrots-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="creamygrits" data-cost="15">Creamy Grits</td>
+                    <td>$15</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="creamygrits-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+            </tbody>
+            <div class="cart" id="cart">
+                <h2>Your Cart</h2>
+                <ul id="cartItems"></ul>
+                <hr>
+                <div class="totalCost" id="totalCostDisplay">Total Cost: $0</div>
+                <button class="cartButton" onclick="submitCart()">Submit</button>
+            </div>
+        </table>
+    </div>
+    <div class="home-button">
+        <div class="backButton bg-border" onclick="window.location.href='index.html'"><div style="left:61px;top:86px;--ggs:6.5;"></div></div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const buttons = document.querySelectorAll('.addToCartButton');
+            const cartItems = document.getElementById('cartItems');
+            const totalCostDisplay = document.getElementById('totalCostDisplay');
+            let cart = [];
+        
+            buttons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const itemRow = button.closest('tr');
+                    const itemName = itemRow.querySelector('.item').textContent;
+                    const itemCost = itemRow.querySelector('.item').dataset.cost;
+                    const quantity = itemRow.querySelector('input[type=number]').value;
+                    
+                    const cartItem = {
+                        name: itemName,
+                        cost: parseFloat(itemCost), 
+                        quantity: parseInt(quantity) 
+                    };
+        
+                    cart.push(cartItem);
+                    updateCartUI();
+                });
+            });
+        
+            function updateCartUI() {
+                cartItems.innerHTML = '';
+                let totalCost = 0;
+        
+                cart.forEach(item => {
+                    const li = document.createElement('li');
+                    li.textContent = `${item.name} - $${item.cost} x ${item.quantity}`;
+                    cartItems.appendChild(li);
+        
+                    const itemCost = item.cost * item.quantity;
+                    totalCost += itemCost;
+                });
+        
+                totalCostDisplay.textContent = `Total Cost: $${totalCost.toFixed(2)}`;
+            }
+        
+            window.submitCart = function() {
+                const fileName = 'cart.csv';
+                let csvContent = "Item Name, Cost, Quantity\n";  //CSV header
+                let totalCost = 0;
+
+                cart.forEach(item => {
+                    csvContent += `"${item.name}", $${item.cost}, ${item.quantity}\n`;
+                    totalCost += item.cost * item.quantity; // Calculate total cost
+                });
+
+                csvContent += `Total Cost,, $${totalCost.toFixed(2)}\n`;
+
+                const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+                const anchor = document.createElement('a');
+                anchor.download = fileName;
+                anchor.href = window.URL.createObjectURL(blob);
+                anchor.click();
+                window.URL.revokeObjectURL(anchor.href);
+            };
+
+        });
+    </script>
+
+</body>
+</html>

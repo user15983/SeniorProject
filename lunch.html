@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dining Cart</title>
+    <link rel="stylesheet" href="order.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Lunch Menu Cart</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Add to Cart</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="item" id="sashimi" data-cost="18">Sashimi (3 Pieces)</td>
+                    <td>$18 each</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="sashimi-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="nigiri" data-cost="18">Nigiri (3 pieces)</td>
+                    <td>$18 each</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="nigiri-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="maki" data-cost="12-24">Maki (6 Pieces)</td>
+                    <td>$12-24</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="maki-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="spicytuna" data-cost="27">Spicy Tuna (8 Pieces)</td>
+                    <td>$27</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="spicytuna-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="volcano" data-cost="29">Volcano (8 Pieces)</td>
+                    <td>$29</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="volcano-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="shrimptempura" data-cost="29">Shrimp Tempura (8 Pieces)</td>
+                    <td>$29</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="shrimptempura-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="cruncyavocado" data-cost="27">Crunchy Avocado (8 Pieces)</td>
+                    <td>$27</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="cruncyavocado-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="sushiplatters" data-cost="95">Sushi Platters (24 Pieces)</td>
+                    <td>$95</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="sushiplatters-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="nigiriplatter" data-cost="65">Nigiri Platter (12 Pieces)</td>
+                    <td>$65</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="nigiriplatter-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="sashimiplatter" data-cost="49">Sashimi Platter (9 Pieces)</td>
+                    <td>$49</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="sashimiplatter-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="unagikabayaki" data-cost="29">Unagi Kabayaki</td>
+                    <td>$29</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="unagikabayaki-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="tekkadon" data-cost="35">Tekka Don</td>
+                    <td>$35</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="tekkadon-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="shakedon" data-cost="33">Shake Don</td>
+                    <td>$33</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="shakedon-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="mochiicecream" data-cost="14">Mochi Ice Cream</td>
+                    <td>$14</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="mochiicecream-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+            </tbody>
+            <div class="cart" id="cart">
+                <h2>Your Cart</h2>
+                <ul id="cartItems"></ul>
+                <hr>
+                <div class="totalCost" id="totalCostDisplay">Total Cost: $0</div>
+                <button class="cartButton" onclick="submitCart()">Submit</button>
+            </div>
+        </table>
+    </div>
+    <div class="home-button">
+        <div class="backButton bg-border" onclick="window.location.href='index.html'"><div style="left:61px;top:86px;--ggs:6.5;"></div></div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const buttons = document.querySelectorAll('.addToCartButton');
+            const cartItems = document.getElementById('cartItems');
+            const totalCostDisplay = document.getElementById('totalCostDisplay');
+            let cart = [];
+        
+            buttons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const itemRow = button.closest('tr');
+                    const itemName = itemRow.querySelector('.item').textContent;
+                    const itemCost = itemRow.querySelector('.item').dataset.cost;
+                    const quantity = itemRow.querySelector('input[type=number]').value;
+                    
+                    const cartItem = {
+                        name: itemName,
+                        cost: parseFloat(itemCost), 
+                        quantity: parseInt(quantity) 
+                    };
+        
+                    cart.push(cartItem);
+                    updateCartUI();
+                });
+            });
+        
+            function updateCartUI() {
+                cartItems.innerHTML = '';
+                let totalCost = 0;
+        
+                cart.forEach(item => {
+                    const li = document.createElement('li');
+                    li.textContent = `${item.name} - $${item.cost} x ${item.quantity}`;
+                    cartItems.appendChild(li);
+        
+                    const itemCost = item.cost * item.quantity;
+                    totalCost += itemCost;
+                });
+        
+                totalCostDisplay.textContent = `Total Cost: $${totalCost.toFixed(2)}`;
+            }
+        
+            window.submitCart = function() {
+                const fileName = 'cart.csv';
+                let csvContent = "Item Name, Cost, Quantity\n";  //header
+                let totalCost = 0;
+
+                cart.forEach(item => {
+                    csvContent += `"${item.name}", $${item.cost}, ${item.quantity}\n`;
+                    totalCost += item.cost * item.quantity; // Calculate total cost
+                });
+
+                csvContent += `Total Cost,, $${totalCost.toFixed(2)}\n`;
+
+                const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+                const anchor = document.createElement('a');
+                anchor.download = fileName;
+                anchor.href = window.URL.createObjectURL(blob);
+                anchor.click();
+                window.URL.revokeObjectURL(anchor.href);
+            };
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Welcome to Four Seasons!</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body style="padding:0;margin:0;" class="main">
+        <div id="mainDiv" class="mainDiv vcenter">
+            <div id="header" class="header">
+                <span id="title" class="title">Four Seasons Dining Menu</span>
+            </div>
+            <div id="swap" class="bodyDiv">
+            <table class="buttonsTable">
+                <tbody id="buttonsTable-body">
+                    <tr>
+                        <td><div class="btn-img" style="background-image: url('assets/breakfast.jpg')" onclick="onButtonClick(0)"><div class="bg-text">Breakfast</div></div></td>
+                        <td><div class="btn-img" style="background-image: url('assets/lunch.jpg')" onclick="onButtonClick(1)"><div class="bg-text">Lunch</div></div></td>
+                        <td><div class="btn-img" style="background-image: url('assets/dinner.jpg')" onclick="onButtonClick(2)"><div class="bg-text">Dinner</div></div></td>
+                    </tr>
+                    <tr>
+                        <td><a href="breakfast.html" class="btn-img order-btn"><div class="bg-text">Order</div></a></td>
+                        <td><a href="lunch.html" class="btn-img order-btn"><div class="bg-text">Order</div></a></td>
+                        <td><a href="dinner.html" class="btn-img order-btn"><div class="bg-text">Order</div></a></td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        </div>
+        <script src="./renderer.js"></script>
+    </body>
+</html>

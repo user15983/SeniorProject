@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dining Cart</title>
+    <link rel="stylesheet" href="order.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Breakfast Menu Cart</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Add to Cart</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="item" id="smokedsalonplate" data-cost="27">Smoked Salmon Plate</td>
+                    <td>$27</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="smokedsalonplate-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="thesfcontinentalsmall" data-cost="33">The SF Continental (Small Pot)</td>
+                    <td>$33</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="thesfcontinental-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="thesfcontinentallarge" data-cost="37">The SF Continental (Large Pot of Coffee)</td>
+                    <td>$37</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="thesfcontinental-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="bowloffreshberries" data-cost="17">Bowl of Fresh Berries</td>
+                    <td>$17</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="bowloffreshberries-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="slicedseasonalfruitandberriesplate" data-cost="23">Sliced Seasonal Fruit and Berries Plate</td>
+                    <td>$23</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="slicedseasonalfruitandberriesplate-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="housemadegranola" data-cost="12">House Made Granola</td>
+                    <td>$12</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="housemadegranola-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="steelcutoatmeal" data-cost="14">Steel Cut Oatmeal</td>
+                    <td>$14</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="steelcutoatmeal-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="stealcutoatmealwithblueberriesorbananas" data-cost="17">Steel Cut Oatmeal with Blueberries or Bananas</td>
+                    <td>$17</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="stealcutoatmealwithblueberriesorbananas-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="berryparfait" data-cost="16">Berry Parfait</td>
+                    <td>$16</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="berryparfait-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="freshbakedpastries" data-cost="9">Fresh Baked Pastries</td>
+                    <td>$9</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="freshbakedpastries-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="bakerybasket" data-cost="23">Bakery Basket (3 Pastries)</td>
+                    <td>$23</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="bakerybasket-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="briochefrenchtoast" data-cost="14">Brioche French Toast</td>
+                    <td>$14</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="briochefrenchtoast-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="briochefrenchtoastwithberriesorbananas" data-cost="25">Brioche French Toast with Berries or Bananas</td>
+                    <td>$25</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="briochefrenchtoastwithberriesorbananas-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="lemonricottapancake" data-cost="23">Lemon Ricotta Pancake</td>
+                    <td>$23</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="lemonricottapancake-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="buttermilkwaffle" data-cost="21">Buttermilk Waffle</td>
+                    <td>$21</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="buttermilkwaffle-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="chickenandwaffle" data-cost="37">Chicken and Waffle</td>
+                    <td>$37</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="chickenandwaffle-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="chickenandwafflewithegg" data-cost="40">Chicken and waffle with egg</td>
+                    <td>$40</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="chickenandwafflewithegg-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="avocadotoast" data-cost="24">Avocado Toast</td>
+                    <td>$24</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="avocadotoast-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="eggwhitefrittata" data-cost="25">Egg White Frittata</td>
+                    <td>$25</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="eggwhitefrittata-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="eggsbenedict" data-cost="25">Eggs Benedict</td>
+                    <td>$25</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="eggsbenedict-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="twoeggsanystyle" data-cost="24">Two Eggs Any Style</td>
+                    <td>$24</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="twoeggsanystyle-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="californiaomelet" data-cost="27">California Omelet</td>
+                    <td>$27</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="californiaomelet-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="thecomplete" data-cost="39">The Complete</td>
+                    <td>$39</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="californiaomelet-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="proteins" data-cost="11">Proteins</td>
+                    <td>$11</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="proteins-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="veggies" data-cost="8">Veggies</td>
+                    <td>$8</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="veggies-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="yogurt" data-cost="8">Yogurt</td>
+                    <td>$8</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="yogurt-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="breadoptions" data-cost="7">Bread Options</td>
+                    <td>$7</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="breadoptions-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="juiceoptions" data-cost="10">Juice Options</td>
+                    <td>$10</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="juiceoptions" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="smoothies" data-cost="12">Smoothies</td>
+                    <td>$12</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="smoothies" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="bigsur" data-cost="12">Big Sur</td>
+                    <td>$12</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="bigsur" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="mavericks" data-cost="12">Mavericks</td>
+                    <td>$12</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="mavericks-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="santabarbara" data-cost="12">Santa Barbara</td>
+                    <td>$12</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="santabarbara" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="potofcoffee" data-cost="12/18">Pot of Coffee</td>
+                    <td>$12/$18</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="potofcoffee" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="espresso" data-cost="8/10">Espresso</td>
+                    <td>$8/$10</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="espresso" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="specialtycoffee" data-cost="12">Specialty Coffee</td>
+                    <td>$12</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="specialtycoffee" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="hotchocolate" data-cost="8">Hot Chocolate</td>
+                    <td>$8</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="hotchocolate" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="tea" data-cost="9">Tea</td>
+                    <td>$9</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="tea-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="embarcaderosilverdollarpancakes" data-cost="12">Embarcadero Silver Dollar Pancakes</td>
+                    <td>$12</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="embarcaderosilverdollarpancakes" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="wafflenberries" data-cost="12">Waffle & Berries</td>
+                    <td>$12</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="wafflenberries-btn" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="frenchtoaststicks" data-cost="14">French Toast Sticks</td>
+                    <td>$14</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="frenchtoaststicks" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td class="item" id="goldengatescramble" data-cost="18">Golden Gate Scramble</td>
+                    <td>$18</td>
+                    <td><input type="number" value="1" min="1" max="10"></td>
+                    <td><button id="goldengatescramble" class="addToCartButton" type="button">Add to Cart</button></td>
+                </tr>
+            </tbody>
+            <div class="cart" id="cart">
+                <h2>Your Cart</h2>
+                <ul id="cartItems"></ul>
+                <hr>
+                <div class="totalCost" id="totalCostDisplay">Total Cost: $0</div>
+                <button class="cartButton" onclick="submitCart()">Submit</button>
+            </div>
+        </table>
+    </div>
+    <div class="home-button">
+        <div class="backButton bg-border" onclick="window.location.href='index.html'"><div style="left:61px;top:86px;--ggs:6.5;"></div></div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const buttons = document.querySelectorAll('.addToCartButton');
+            const cartItems = document.getElementById('cartItems');
+            const totalCostDisplay = document.getElementById('totalCostDisplay');
+            let cart = [];
+        
+            buttons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const itemRow = button.closest('tr');
+                    const itemName = itemRow.querySelector('.item').textContent;
+                    const itemCost = itemRow.querySelector('.item').dataset.cost;
+                    const quantity = itemRow.querySelector('input[type=number]').value;
+                    
+                    const cartItem = {
+                        name: itemName,
+                        cost: parseFloat(itemCost), 
+                        quantity: parseInt(quantity) 
+                    };
+        
+                    cart.push(cartItem);
+                    updateCartUI();
+                });
+            });
+        
+            function updateCartUI() {
+                cartItems.innerHTML = '';
+                let totalCost = 0;
+        
+                cart.forEach(item => {
+                    const li = document.createElement('li');
+                    li.textContent = `${item.name} - $${item.cost} x ${item.quantity}`;
+                    cartItems.appendChild(li);
+        
+                    // Calculate item cost and add to total cost
+                    const itemCost = item.cost * item.quantity;
+                    totalCost += itemCost;
+                });
+        
+                // Update total cost display
+                totalCostDisplay.textContent = `Total Cost: $${totalCost.toFixed(2)}`;
+            }
+        
+            window.submitCart = function() {
+                const fileName = 'cart.csv';
+                let csvContent = "Item Name, Cost, Quantity\n";  //header for csv
+                let totalCost = 0;
+
+                cart.forEach(item => {
+                    csvContent += `"${item.name}", $${item.cost}, ${item.quantity}\n`;
+                    totalCost += item.cost * item.quantity; // Calculate total cost
+                });
+
+                csvContent += `Total Cost,, $${totalCost.toFixed(2)}\n`;
+
+                const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+                const anchor = document.createElement('a');
+                anchor.download = fileName;
+                anchor.href = window.URL.createObjectURL(blob);
+                anchor.click();
+                window.URL.revokeObjectURL(anchor.href);
+            };
+        });
+    </script>
+    
+</body>
+</html>
